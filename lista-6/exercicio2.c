@@ -7,6 +7,9 @@ void jogo_da_senha(){
     int senha;
     int senha_advinha;
     int jogador2_venceu = 0;
+    int jogarDeNovo = 1;
+    
+    while(jogarDeNovo){
     
     while(senhaInvalida){
         printf("Jogador 1 - Digite a senha (entre 1 a 100): ");
@@ -35,6 +38,15 @@ void jogo_da_senha(){
         
         tentativa_atual++;
     }
+    
+    
+    printf("Jogar de novo (0 ou 1)? \n");
+    scanf("%d", &jogarDeNovo);
+    if(jogarDeNovo){
+        senhaInvalida = 1;
+        tentativa_atual = 1;
+    }
+}
     
     printf("\n");
 }
